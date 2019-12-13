@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    function Validation() 
+        {  //Validation is a function Name it is perform on onClentClick Event
+            var errors = "";
+
+            errors += CheckName();
+            errors += CheckLastName();
+            errors += CheckEmail();
+            errors += CheckPassword(); 
+
+            if (errors != "") 
+            {
+                alert(errors);
+                return false;
+            }
+        }
+
+        //getElementById:เก็บค่าจาก client
+        // ตรวจสอบโดย exp.test(ค่าที่จะเทส)
+        function CheckName() 
+        {
+            //รับค่าจาก client
+            var name = document.getElementById('txtname');
+            var exp = /^[a-zA-Z ]+$/
+            //ถ้าไม่ได้กรอกข้อมูล
+            if(name.value == "")
+            {
+                return "กรุณากรอกชื่อ\n";
+            }
+            //กรณีถูกต้องแล้ว
+            else if(exp.test(name.value))
+            {
+                return "ผ่าน\n";
+            }
+            //ถ้าข้อมูลผิดเงื่อนไข
+            else
+            {
+                return "ชื่อไม่ถูกต้อง\n";
+            }
+        }
+
+        function CheckLastName() 
+        {
+            //รับค่าจาก client
+            var lastname = document.getElementById('txtLastName');
+            var exp = /^[a-zA-Z ]+$/
+            //ถ้าไม่ได้กรอกข้อมูล
+            if(lastname.value == "")
+            {
+                return "กรุณากรอกนามสกุล\n";
+            }
+            //กรณีถูกต้องแล้ว
+            else if(exp.test(lastname.value))
+            {
+                return "ผ่าน\n";
+            }
+            //ถ้าข้อมูลผิดเงื่อนไข
+            else
+            {
+                return "นามสุกลไม่ถูกต้อง\n";
+            }
+        }
+
+        function CheckEmail() 
+        {
+            var email = document.getElementById('txtemail address');
+            var exp = /^[A-Za-z]+@(gmail|hotmail|psru)\.com|.ac.th$/
+            //ถ้าไม่ได้กรอกข้อมูล
+            if(email.value == "")
+            {
+                return "กรุณากรอกอีเมล\n";
+            }
+            //กรณีถูกต้องแล้ว
+            else if(exp.test(email.value))
+            {
+                return "ผ่าน\n";
+            }
+            //ถ้าข้อมูลผิดเงื่อนไข
+            else
+            {
+                return "อีเมลไม่ถูกต้อง\n";
+            }
+        }
+
+        
+        function CheckPassword() 
+        {
+            var pass = document.getElementById('txtpassword');
+            var exp = /^[a-z]+[0-9]{8}$/ 
+            //ถ้าไม่ได้กรอกข้อมูล
+            if(pass.value == "")
+            {
+                return "กรุณากรอกรหัสผ่าน\n";
+            }
+            //กรณีถูกต้องแล้ว
+            else if(exp.test(pass.value))
+            {
+                return "ผ่าน\n";
+            }
+            //ถ้าข้อมูลผิดเงื่อนไข
+            else
+            {
+                return "รหัสผ่านไม่ถูกต้อง\n";
+            }
+        }
+
+</script>
+
+   <!--<link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+                <div class="container">
+                  <a class="navbar-brand" href="index.html">Register Paramet Sukaha</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="oi oi-menu"></span> Menu
+                  </button>
+            
+                  <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                      <li class="nav-item active"><a href="register.html" class="nav-link">register</a></li>
+                      <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                    </ul>
+                  </div>
+                </div>
+        </nav>
+
+        <div class="block-31" style="position: relative;">
+                <div class="owl-carousel loop-block-31 ">
+                  <div class="block-30 item" style="background-image: url('images/Familyh.jpg');" data-stellar-background-ratio="0.5">
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-7">
+                          <h2 class="heading"></h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>           
+   <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <table>
+        <h1>Register</h1>
+        <tr>
+            <td>Name</td>
+        </tr>
+        <tr><td><Input type="text" ID="txtname" runat="server"></Input type=“text”></td></tr>
+        <tr>
+            <tr><td>Lastname</td></tr>
+            <td><Input type="text" ID="txtLastName" runat="server"></Input type=“text”></td>
+        </tr>
+        <tr>
+            <tr><td>Email address</td></tr>
+            <td><Input type="text" ID="txtemail address" runat="server"></Input type=“text”></td>
+        </tr>
+        <tr>
+            <tr><td>Password</td></tr>
+            <td><Input type="text" ID="txtpassword" runat="server"></Input type=“text”></td>
+        </tr>
+        <tr>
+            <tr><td>Position</td>
+        </tr>
+        <tr><td>
+            <select>
+                <option value="volvo">Software engineering</option>
+                <option value="volvo">Programming</option>
+                <option value="volvo">Nwtwork engineering</option>
+                <option value="volvo">Tester</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <tr><td>Skill</td></tr>
+            <td><textarea rows="4" cols="50"> </textarea></td>
+        </tr>
+        <tr><td><form action="/action_page.php">
+            <p>I agree with website terms of service:</p>
+              <input type="radio" name="gender" value="yes"> yes<br>
+              <input type="radio" name="gender" value="no"> no<br> 
+            
+              <td><button type="button" ID="btnsave" onclick="return Validation()">SAVE</button></td>
+            </form></td></tr>
+        <tr><td>Paramet Sukaha</td><td><td>Contact</td></tr>
+    </table>   
+
+</body>
+</html>
